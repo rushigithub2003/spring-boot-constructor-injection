@@ -1,6 +1,8 @@
 package com.example.constructor.entity;
 
+import jakarta.persistence.Entity;
 
+@Entity
 public class Customer {
 
 	private int id;
