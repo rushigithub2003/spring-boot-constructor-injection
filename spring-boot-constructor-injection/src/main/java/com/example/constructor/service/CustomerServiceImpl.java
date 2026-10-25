@@ -19,4 +19,10 @@ public class CustomerServiceImpl implements CustomerService {
 		cr.save(c);
 	}
 
+	@Override
+	public Customer getCustomerById(int id) {
+		// TODO Auto-generated method stub
+		return cr.findById(id).get();
+	}
+
 }

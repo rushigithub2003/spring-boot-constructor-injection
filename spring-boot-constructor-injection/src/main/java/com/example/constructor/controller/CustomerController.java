@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.constructor.entity.Customer;
 import com.example.constructor.service.CustomerService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 public class CustomerController {
@@ -27,4 +29,10 @@ public class CustomerController {
 		cs.addCustomer(c);
 		return "Customer Added";
 	}
+
+	@GetMapping("customer")
+	Customer getCustomerById(@PathVariable int id) {
+		return cs.getCustomerById(id);
+	}
+
 }

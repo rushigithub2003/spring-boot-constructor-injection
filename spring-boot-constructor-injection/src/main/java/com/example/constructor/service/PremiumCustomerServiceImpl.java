@@ -7,8 +7,8 @@ import com.example.constructor.entity.Customer;
 import com.example.constructor.repository.CustomerRepo;
 
 @Service
-public class PremiumCustomerServiceImpl implements CustomerService{
-	
+public class PremiumCustomerServiceImpl implements CustomerService {
+
 	@Autowired
 	CustomerRepo cr;
 
@@ -17,7 +17,11 @@ public class PremiumCustomerServiceImpl implements CustomerService{
 		// TODO Auto-generated method stub
 		cr.save(c);
 	}
-	
-	
+
+	@Override
+	public Customer getCustomerById(int id) {
+		// TODO Auto-generated method stub
+		return cr.findById(id).get();
+	}
 
 }
