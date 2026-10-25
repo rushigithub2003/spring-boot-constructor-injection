@@ -9,5 +9,8 @@ public interface CustomerService {
 	Customer getCustomerById(int id);
 
 	void deleteCustomerById(int id);
+	
+	void deleteAllCustomer();
+	
 
 }

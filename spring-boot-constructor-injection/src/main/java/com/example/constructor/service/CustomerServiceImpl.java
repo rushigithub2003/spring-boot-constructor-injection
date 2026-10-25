@@ -31,4 +31,10 @@ public class CustomerServiceImpl implements CustomerService {
 		cr.deleteById(id);
 	}
 
+	@Override
+	public void deleteAllCustomer() {
+		// TODO Auto-generated method stub
+		cr.deleteAll();
+	}
+
 }

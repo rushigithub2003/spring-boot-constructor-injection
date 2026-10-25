@@ -36,13 +36,17 @@ public class CustomerController {
 	Customer getCustomerById(@PathVariable int id) {
 		return cs.getCustomerById(id);
 	}
-	
+
 	@DeleteMapping("customer/{id}")
-	String deleteCustomerById(@PathVariable int id)
-	{
+	String deleteCustomerById(@PathVariable int id) {
 		cs.deleteCustomerById(id);
 		return "Customer Deleted";
 	}
-	
+
+	@DeleteMapping("customer")
+	String deleteAllCustomer() {
+		cs.deleteAllCustomer();
+		return "All Customer Deleted..";
+	}
 
 }
